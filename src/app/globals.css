@@ -1,0 +1,139 @@
+/* KitobAI Bootstrap Global Styles */
+
+:root {
+  --bs-primary: #2563eb;
+  --bs-secondary: #6366f1;
+  --bs-border-radius-xl: 1.5rem;
+  --bs-border-radius-2xl: 3rem;
+}
+
+body {
+  background-color: #111111;
+  color: #fdfdfd;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  overflow-x: hidden;
+}
+
+[data-bs-theme="dark"] body {
+  background-color: #09090b;
+  color: #fafafa;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  [data-bs-theme="dark"] .glass {
+  background: rgba(15, 23, 42, 0.6); /* dark glass */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem !important;
+}
+.rounded-4xl {
+  border-radius: 2.5rem !important;
+}
+.rounded-5xl {
+  border-radius: 3.5rem !important;
+}
+
+.shadow-premium {
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom Bootstrap Overrides */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  font-weight: 800;
+  border-radius: 1rem;
+  padding: 0.8rem 2rem;
+}
+.btn-lg {
+  border-radius: 1.2rem;
+}
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: white;
+}
+[data-bs-theme="dark"] .card {
+  background: #18181b;
+  border-color: #27272a;
+}
+
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+}
+[data-bs-theme="dark"] .navbar {
+  background: rgba(0, 0, 0, 0.8);
+  border-color: #27272a;
+}
+
+.z-index-master {
+  z-index: 9999 !important;
+}
+
+.hover-scale-101:hover {
+  transform: scale(1.01);
+}
+
+.hover-scale-105:hover {
+  transform: scale(1.05);
+}
+
+.active-scale-95:active {
+  transform: scale(0.95);
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
