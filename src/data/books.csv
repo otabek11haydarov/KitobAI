@@ -1,0 +1,51 @@
+﻿id,title,author,genre,year,rating,description,image_url
+1,1984,George Orwell,Dystopian,1949,4.8,A chilling look at a totalitarian future where Big Brother is always watching.,https://covers.openlibrary.org/b/id/12648750-L.jpg
+2,To Kill a Mockingbird,Harper Lee,Classic,1960,4.9,A profound story showing the loss of innocence in a racially divided South.,https://covers.openlibrary.org/b/id/8225266-L.jpg
+3,The Great Gatsby,F. Scott Fitzgerald,Modernist,1925,4.5,A story of ambition, love, and the elusive American Dream in the Roaring Twenties.,https://covers.openlibrary.org/b/id/8432047-L.jpg
+4,One Hundred Years of Solitude,Gabriel Garcia Marquez,Magic Realism,1967,4.7,The multi-generational story of the Buendia family in the town of Macondo.,https://covers.openlibrary.org/b/id/8302062-L.jpg
+5,Pride and Prejudice,Jane Austen,Romance,1813,4.8,Sparkling study of the manners and morals of the 19th-century British gentry.,https://covers.openlibrary.org/b/id/12640237-L.jpg
+6,The Catcher in the Rye,J.D. Salinger,Modernist,1951,4.2,A narrative of teenage angst and rebellion through the eyes of Holden Caulfield.,https://covers.openlibrary.org/b/id/8225272-L.jpg
+7,The Hobbit,J.R.R. Tolkien,Fantasy,1937,4.9,The adventure of Bilbo Baggins as he sets out to reclaim a treasure from a dragon.,https://covers.openlibrary.org/b/id/12502621-L.jpg
+8,Harry Potter and the Sorcerer's Stone,J.K. Rowling,Fantasy,1997,4.8,A boy discovers on his eleventh birthday that he is a wizard and is invited to Hogwarts.,https://covers.openlibrary.org/b/id/10521270-L.jpg
+9,The Alchemist,Paulo Coelho,Adventure,1988,4.7,A shepherd's journey to find buried treasure in the Egyptian pyramids.,https://covers.openlibrary.org/b/id/8229871-L.jpg
+10,Brave New World,Aldous Huxley,Dystopian,1932,4.6,A vision of a futuristic society where happiness is manufactured and individuality is lost.,https://covers.openlibrary.org/b/id/10493860-L.jpg
+11,The Lord of the Rings,J.R.R. Tolkien,Fantasy,1954,5.0,An epic quest to destroy the One Ring and defeat the Dark Lord Sauron.,https://covers.openlibrary.org/b/id/12502624-L.jpg
+12,The Diary of a Young Girl,Anne Frank,Biography,1947,4.9,Personal account of a young Jewish girl's life while hiding from the Nazis.,https://covers.openlibrary.org/b/id/12028608-L.jpg
+13,Animal Farm,George Orwell,Allegory,1945,4.7,A satirical look at the events leading up to the Russian Revolution.,https://covers.openlibrary.org/b/id/12648753-L.jpg
+14,Moby-Dick,Herman Melville,Classic,1851,4.1,A captain's obsessive quest for revenge against a legendary white whale.,https://covers.openlibrary.org/b/id/10488665-L.jpg
+15,The Little Prince,Antoine de Saint-Exupery,Fable,1943,4.9,A philosophical tale of a young prince who travels across various planets.,https://covers.openlibrary.org/b/id/12613115-L.jpg
+16,Jane Eyre,Charlotte Bronte,Gothic,1847,4.7,The life and experiences of an orphan who grows up to become a governess.,https://covers.openlibrary.org/b/id/10543666-L.jpg
+17,Wuthering Heights,Emily Bronte,Gothic,1847,4.4,A powerful and tragic story of intense passion and revenge on the moors.,https://covers.openlibrary.org/b/id/10543669-L.jpg
+18,Great Expectations,Charles Dickens,Classic,1861,4.5,The growth and personal development of an orphan named Pip.,https://covers.openlibrary.org/b/id/10543664-L.jpg
+19,Crime and Punishment,Fyodor Dostoevsky,Psychological,1866,4.8,An exploration of the moral dilemmas and mental anguish of a murderer.,https://covers.openlibrary.org/b/id/8225278-L.jpg
+20,The Brothers Karamazov,Fyodor Dostoevsky,Philosophy,1880,4.9,A deeply philosophical novel exploring the nature of God, free will, and morality.,https://covers.openlibrary.org/b/id/8225274-L.jpg
+21,Ulysses,James Joyce,Modernist,1922,3.9,A complex and innovative novel following Leo Bloom through one day in Dublin.,https://covers.openlibrary.org/b/id/10493850-L.jpg
+22,The Old Man and the Sea,Ernest Hemingway,Novella,1952,4.6,An aging fisherman's epic struggle with a giant marlin in the Gulf Stream.,https://covers.openlibrary.org/b/id/12648752-L.jpg
+23,The Grapes of Wrath,John Steinbeck,Classic,1939,4.7,The struggles of a poor family of tenant farmers during the Great Depression.,https://covers.openlibrary.org/b/id/12648756-L.jpg
+24,Catch-22,Joseph Heller,Satire,1961,4.5,A dark and satirical look at the absurdity of war and military life.,https://covers.openlibrary.org/b/id/10543662-L.jpg
+25,Lolita,Vladimir Nabokov,Drama,1955,4.3,A controversial and beautifully written novel about obsession and tragedy.,https://covers.openlibrary.org/b/id/8225270-L.jpg
+26,Fahrenheit 451,Ray Bradbury,Science Fiction,1953,4.7,A future society where books are banned and firemen burn any that are found.,https://covers.openlibrary.org/b/id/10543661-L.jpg
+27,Dune,Frank Herbert,Science Fiction,1965,4.9,An interstellar saga of politics, religion, and survival on the desert planet Arrakis.,https://covers.openlibrary.org/b/id/10488662-L.jpg
+28,Slaughterhouse-Five,Kurt Vonnegut,Science Fiction,1969,4.6,An anti-war novel following Billy Pilgrim through his experiences as a POW.,https://covers.openlibrary.org/b/id/8225271-L.jpg
+29,The Handmaid's Tale,Margaret Atwood,Dystopian,1985,4.6,A chilling vision of a near-future theocracy where women are stripped of rights.,https://covers.openlibrary.org/b/id/12648757-L.jpg
+30,Beloved,Toni Morrison,Historical,1987,4.7,A powerful story of a former slave haunted by the ghost of her daughter.,https://covers.openlibrary.org/b/id/8302061-L.jpg
+31,The Color Purple,Alice Walker,Epistolary,1982,4.8,The journey of an African-American woman finding her voice and strength in the South.,https://covers.openlibrary.org/b/id/8302064-L.jpg
+32,Life of Pi,Yann Martel,Adventure,2001,4.4,A young boy's survival on a lifeboat in the Pacific Ocean with a Bengal tiger.,https://covers.openlibrary.org/b/id/8225275-L.jpg
+33,Memoirs of a Geisha,Arthur Golden,Historical Fiction,1997,4.5,The fictional memoir of a geisha working in Kyoto before and after WWII.,https://covers.openlibrary.org/b/id/8225276-L.jpg
+34,The Da Vinci Code,Dan Brown,Thriller,2003,4.2,A high-stakes puzzle-solving adventure involving the Church and secret societies.,https://covers.openlibrary.org/b/id/8225277-L.jpg
+35,Looking for Alaska,John Green,Young Adult,2005,4.3,A boy's search for the Great Perhaps leads him to a mysterious girl at boarding school.,https://covers.openlibrary.org/b/id/10543660-L.jpg
+36,The Book Thief,Markus Zusak,Historical,2005,4.9,A story narrated by Death about a young girl living in Nazi Germany.,https://covers.openlibrary.org/b/id/10543659-L.jpg
+37,The Kite Runner,Khaled Hosseini,Drama,2003,4.8,A powerful story of friendship, betrayal, and redemption in Afghanistan.,https://covers.openlibrary.org/b/id/8225279-L.jpg
+38,Sapiens,Yuval Noah Harari,Non-Fiction,2011,4.8,A brief history of humankind from the Stone Age to the twenty-first century.,https://covers.openlibrary.org/b/id/8225281-L.jpg
+39,Educated,Tara Westover,Memoir,2018,4.7,A woman's journey from a survivalist family in the mountains to Harvard and Cambridge.,https://covers.openlibrary.org/b/id/10543658-L.jpg
+40,Becoming,Michelle Obama,Biography,2018,4.9,The former First Lady's deeply personal memoir of her journey.,https://covers.openlibrary.org/b/id/10493863-L.jpg
+41,Atomic Habits,James Clear,Self-Help,2018,4.9,A practical guide to building good habits and breaking bad ones.,https://covers.openlibrary.org/b/id/10488669-L.jpg
+42,The Midnight Library,Matt Haig,Fantasy,2020,4.4,A woman explores the infinite lives she could have lived in a magical library.,https://covers.openlibrary.org/b/id/10488672-L.jpg
+43,Circe,Madeline Miller,Mythology,2018,4.6,The powerful story of the Greek goddess and enchantress Circe.,https://covers.openlibrary.org/b/id/10488675-L.jpg
+44,Where the Crawdads Sing,Delia Owens,Mystery,2018,4.7,A young girl's survival and growth in the marshes of North Carolina.,https://covers.openlibrary.org/b/id/10488678-L.jpg
+45,The Silent Patient,Alex Michaelides,Thriller,2019,4.5,A shocking story of a woman's act of violence against her husband and the psychiatrist searching for the reason.,https://covers.openlibrary.org/b/id/10488681-L.jpg
+46,Normal People,Sally Rooney,Romance,2018,4.2,The complex relationship between two young people as they move from school to university.,https://covers.openlibrary.org/b/id/10488684-L.jpg
+47,The Shadow of the Wind,Carlos Ruiz Zafon,Mystery,2001,4.8,A young boy discovers a mysterious book that changes his life in post-war Barcelona.,https://covers.openlibrary.org/b/id/8225283-L.jpg
+48,Kafka on the Shore,Haruki Murakami,Surrealism,2002,4.6,A dreamy and mysterious journey of a young boy and an old man in Japan.,https://covers.openlibrary.org/b/id/10543657-L.jpg
+49,A Song of Ice and Fire,George R.R. Martin,Fantasy,1996,4.9,The epic power struggle between noble families in the Seven Kingdoms of Westeros.,https://covers.openlibrary.org/b/id/8225284-L.jpg
+50,Never Let Me Go,Kazuo Ishiguro,Literary Fiction,2005,4.5,A gentle but devastating story of clones living in a secluded boarding school.,https://covers.openlibrary.org/b/id/12640239-L.jpg
