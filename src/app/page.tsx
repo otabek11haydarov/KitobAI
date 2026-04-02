@@ -211,7 +211,7 @@ export default function Home() {
                   borderRadius: '2rem',
                   background: 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)'
                 }}
-                onClick={() => isLoggedIn ? setIsWorkspace(true) : setIsAuthModalOpen(true)}
+                onClick={() => window.location.href = '/ai'}
               >
                 <div className="mb-4 text-primary d-flex justify-content-center align-items-center bg-white rounded-circle shadow-sm" style={{ width: '80px', height: '80px' }}>
                   <Sparkles size={36} strokeWidth={2} />

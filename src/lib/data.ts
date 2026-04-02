@@ -13,6 +13,14 @@ export interface Seller {
   linkId: string; // The ID of the book that corresponds to this seller's listing, so we can route to it
 }
 
+export interface ChatSession {
+  id: string;
+  bookName: string;
+  image?: string;
+  messages: { role: 'ai' | 'user'; text: string }[];
+  createdAt: string;
+}
+
 export interface Book {
   id: string;
   title: string;
