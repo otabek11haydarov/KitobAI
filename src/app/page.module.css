@@ -1,0 +1,97 @@
+.nav {
+  z-index: 1040;
+}
+
+.navInner {
+  max-width: 1400px;
+}
+
+.mobileMenuLink {
+  background-color: #f9fafb;
+}
+
+.mobileMenuLink:hover,
+.mobileMenuLink:focus-visible {
+  background-color: #eff6ff;
+  color: var(--bs-primary) !important;
+}
+
+.heroLead {
+  max-width: 600px;
+}
+
+.heroGrid {
+  max-width: 1000px;
+}
+
+.heroCard {
+  padding: 4rem 3rem;
+  border-radius: 2rem;
+  min-height: 320px;
+}
+
+.heroCardPrimary {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+.heroCardSecondary {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.iconCircle {
+  width: 80px;
+  height: 80px;
+}
+
+.mutedText {
+  color: #4b5563 !important;
+}
+
+.bookCard {
+  border-radius: 2rem;
+}
+
+.bookCover {
+  height: 350px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.bookImage {
+  object-fit: cover;
+}
+
+.bookDescription {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sectionCard {
+  border-radius: 2rem;
+}
+
+.deferredSection {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
+}
+
+.stickyColumn {
+  position: sticky;
+  top: 120px;
+}
+
+@media (max-width: 991px) {
+  .heroCard {
+    padding: 3rem 2rem;
+  }
+
+  .bookCover {
+    height: 280px;
+  }
+
+  .stickyColumn {
+    position: static;
+  }
+}

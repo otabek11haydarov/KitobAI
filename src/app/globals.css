@@ -18,6 +18,28 @@ body {
   overflow-x: hidden;
 }
 
+a,
+button,
+input,
+textarea,
+select {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 2px;
+}
+
 [data-bs-theme="dark"] body {
   background-color: #09090b;
   color: #fafafa;
@@ -25,14 +47,14 @@ body {
 
 .glass {
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-  [data-bs-theme="dark"] .glass {
+[data-bs-theme="dark"] .glass {
   background: rgba(15, 23, 42, 0.6); /* dark glass */
   border: 1px solid rgba(255, 255, 255, 0.1);
-}
 }
 
 .rounded-3xl {
@@ -64,17 +86,18 @@ body {
 
 @keyframes float {
   0% {
-    transform: translateY(0px);
+    top: 0;
   }
   50% {
-    transform: translateY(-10px);
+    top: -10px;
   }
   100% {
-    transform: translateY(0px);
+    top: 0;
   }
 }
 
 .animate-float {
+  position: relative;
   animation: float 6s ease-in-out infinite;
 }
 
@@ -83,7 +106,6 @@ body {
 }
 .scrollbar-hide {
   -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 /* Custom Bootstrap Overrides */
@@ -111,6 +133,7 @@ body {
 .navbar {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
 }
 [data-bs-theme="dark"] .navbar {
@@ -136,4 +159,24 @@ body {
 
 .transition-all {
   transition: all 0.3s ease;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hover-text-primary:hover {
+  color: var(--bs-primary) !important;
+}
+
+.hover-text-danger:hover {
+  color: var(--bs-danger) !important;
+}
+
+.hover-opacity-75:hover {
+  opacity: 0.75;
+}
+
+.object-fit-cover {
+  object-fit: cover;
 }

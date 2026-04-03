@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, MessageSquare } from 'lucide-react';
 import { collection, query, orderBy, onSnapshot, addDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '../lib/firebase';
+import { db } from '../lib/firebase-firestore';
 import { Discussion, Comment } from '../types/community';
 import CommentItem from './CommentItem';
 
