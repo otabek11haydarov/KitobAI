@@ -1,0 +1,97 @@
+{
+  "version": "1.0.0",
+  "project": "KitobAI",
+  "description": "Modular AI skill system for Antigravity-style multi-role agent behavior",
+  "selection_strategy": {
+    "priority": [
+      "Most specific domain skill first",
+      "Combine complementary skills for complex tasks",
+      "Escalate to orchestrator for full-system problems"
+    ],
+    "rules": {
+      "ui_tasks": ["frontend-developer", "ui-ux-designer"],
+      "api_issues": ["backend-architect"],
+      "ai_chat": ["ai-agent-engineer"],
+      "full_system": ["orchestrator"],
+      "database_issues": ["database-optimizer"],
+      "security_issues": ["security-engineer"],
+      "deployment": ["devops-automator"],
+      "testing": ["api-tester", "ui-tester", "performance-tester"],
+      "architecture_review": ["software-architect", "orchestrator"]
+    }
+  },
+  "skills": [
+    {
+      "name": "orchestrator",
+      "category": "architecture",
+      "source_path": ".agent/skills/orchestrator/SKILL.md",
+      "description": "Handles multi-layer system coordination across frontend, backend, database, and infrastructure."
+    },
+    {
+      "name": "software-architect",
+      "category": "architecture",
+      "source_path": ".agent/skills/software-architect/SKILL.md",
+      "description": "Designs system architecture, modules, domain models, and scalable structures."
+    },
+    {
+      "name": "ai-agent-engineer",
+      "category": "ai",
+      "source_path": ".agent/skills/ai-agent-engineer/SKILL.md",
+      "description": "Builds and optimizes AI agents, prompt systems, memory, and tool usage."
+    },
+    {
+      "name": "ui-ux-designer",
+      "category": "design",
+      "source_path": ".agent/skills/ui-ux-designer/SKILL.md",
+      "description": "Designs modern UI, UX flows, layouts, and usability improvements."
+    },
+    {
+      "name": "frontend-developer",
+      "category": "engineering",
+      "source_path": ".agent/skills/frontend-developer/SKILL.md",
+      "description": "Implements UI components, API integration, state management, and frontend performance."
+    },
+    {
+      "name": "backend-architect",
+      "category": "engineering",
+      "source_path": ".agent/skills/backend-architect/SKILL.md",
+      "description": "Designs APIs, business logic, authentication, and backend systems."
+    },
+    {
+      "name": "database-optimizer",
+      "category": "engineering",
+      "source_path": ".agent/skills/database-optimizer/SKILL.md",
+      "description": "Optimizes database schema, queries, indexing, and performance."
+    },
+    {
+      "name": "security-engineer",
+      "category": "security",
+      "source_path": ".agent/skills/security-engineer/SKILL.md",
+      "description": "Handles authentication, authorization, validation, and system protection."
+    },
+    {
+      "name": "devops-automator",
+      "category": "operations",
+      "source_path": ".agent/skills/devops-automator/SKILL.md",
+      "description": "Manages deployment, CI/CD, environments, and infrastructure."
+    },
+    {
+      "name": "api-tester",
+      "category": "testing",
+      "source_path": ".agent/skills/api-tester/SKILL.md",
+      "description": "Tests APIs, validation, error handling, and integrations."
+    },
+    {
+      "name": "ui-tester",
+      "category": "testing",
+      "source_path": ".agent/skills/ui-tester/SKILL.md",
+      "description": "Tests UI behavior, responsiveness, and user flows."
+    },
+    {
+      "name": "performance-tester",
+      "category": "testing",
+      "source_path": ".agent/skills/performance-tester/SKILL.md",
+      "description": "Analyzes performance, latency, and scalability."
+    }
+  ]
+}

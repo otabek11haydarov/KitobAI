@@ -46,16 +46,16 @@ export const booksData: Book[] = [
     id: "1",
     title: "1984",
     author: "George Orwell",
-    image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop",
+    image: "/images/books/1984.png",
     thumbnails: [
-      "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=400&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=400&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1589998059171-987d8870337c?q=80&w=400&auto=format&fit=crop"
+      "/images/books/1984.png",
+      "/images/books/1984.png",
+      "/images/books/1984.png"
     ],
     price: "120,000 UZS",
     originalPrice: "150,000 UZS",
     discount: "20% Chegirma",
-    description: "Classic dystopian novel. Kitoblarni tahlil qilish uchun shaxsiy intellektual yordamchi bo'lishi mumkin bo'lgan eng yaxshi asarlardan biri.",
+    description: "George Orwellning mashhur antiutopik asari. Erkinlik, haqiqat va inson irodasi haqidagi o'simlik asar.",
     rating: 4.9,
     reviewsCount: 128,
     languageOptions: ["uzbek", "english", "russian"],
@@ -63,8 +63,8 @@ export const booksData: Book[] = [
     stock: 14,
     isTopSeller: true,
     alternativeSellers: [
-      { id: 101, store: "Asaxiy Books", price: "125,000 UZS", img: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=100&auto=format&fit=crop", linkId: "1-asaxiy" },
-      { id: 102, store: "Azon Kitoblari", price: "115,000 UZS", img: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=100&auto=format&fit=crop", linkId: "1-azon" }
+      { id: 101, store: "Asaxiy Books", price: "125,000 UZS", img: "/images/books/1984.png", linkId: "1-asaxiy" },
+      { id: 102, store: "Azon Kitoblari", price: "115,000 UZS", img: "/images/books/1984.png", linkId: "1-azon" }
     ],
     comments: [
       { id: 1, user: "Alijon Y.", text: "Ajoyib kitob, hammaga tavsiya qilaman!", date: "2 kun oldin" },
@@ -75,9 +75,9 @@ export const booksData: Book[] = [
     id: "1-asaxiy",
     title: "1984 (Asaxiy Nashri)",
     author: "George Orwell",
-    image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop",
+    image: "/images/books/1984.png",
     thumbnails: [
-      "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=400&auto=format&fit=crop"
+      "/images/books/1984.png"
     ],
     price: "125,000 UZS",
     description: "Asaxiy do'konidan taqdim etilgan 1984 kitobi.",
@@ -87,7 +87,7 @@ export const booksData: Book[] = [
     bookTypes: ["paper"],
     stock: 5,
     alternativeSellers: [
-      { id: 100, store: "KitobAI Rasmiy", price: "120,000 UZS", img: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=100&auto=format&fit=crop", linkId: "1" }
+      { id: 100, store: "KitobAI Rasmiy", price: "120,000 UZS", img: "/images/books/1984.png", linkId: "1" }
     ],
     comments: [
       { id: 1, user: "Rustam", text: "Yetkazib berish tez bo'ldi.", date: "1 kun oldin" }
@@ -97,9 +97,9 @@ export const booksData: Book[] = [
     id: "1-azon",
     title: "1984 (Azon Nashri)",
     author: "George Orwell",
-    image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop",
+    image: "/images/books/1984.png",
     thumbnails: [
-      "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=400&auto=format&fit=crop"
+      "/images/books/1984.png"
     ],
     price: "115,000 UZS",
     description: "Azon do'konidan taqdim etilgan arzonroq nashr.",
@@ -109,7 +109,7 @@ export const booksData: Book[] = [
     bookTypes: ["paper"],
     stock: 20,
     alternativeSellers: [
-      { id: 100, store: "KitobAI Rasmiy", price: "120,000 UZS", img: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=100&auto=format&fit=crop", linkId: "1" }
+      { id: 100, store: "KitobAI Rasmiy", price: "120,000 UZS", img: "/images/books/1984.png", linkId: "1" }
     ],
     comments: []
   },
@@ -117,12 +117,13 @@ export const booksData: Book[] = [
     id: "2",
     title: "Sapiens",
     author: "Yuval Noah Harari",
-    image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=800&auto=format&fit=crop",
+    image: "/images/books/sapiens.png",
     thumbnails: [
-      "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=400&auto=format&fit=crop"
+        "/images/books/sapiens.png",
+        "/images/books/sapiens.png"
     ],
     price: "150,000 UZS",
-    description: "A brief history of humankind.",
+    description: "Insoniyat tarixi haqida qisqacha ma'lumot. Biz qanday qilib yer yuzida hokimiyatga erishdik?",
     rating: 4.8,
     reviewsCount: 312,
     languageOptions: ["uzbek", "english"],
@@ -138,12 +139,13 @@ export const booksData: Book[] = [
     id: "3",
     title: "Atomic Habits",
     author: "James Clear",
-    image: "https://images.unsplash.com/photo-1589998059171-987d8870337c?q=80&w=800&auto=format&fit=crop",
+    image: "/images/books/atomic_habits.png",
     thumbnails: [
-      "https://images.unsplash.com/photo-1589998059171-987d8870337c?q=80&w=400&auto=format&fit=crop"
+        "/images/books/atomic_habits.png",
+        "/images/books/atomic_habits.png"
     ],
     price: "135,000 UZS",
-    description: "Build good habits & break bad ones.",
+    description: "Kichik odatlar orqali ulkan natijalarga erishish yo'llari.",
     rating: 4.9,
     reviewsCount: 540,
     languageOptions: ["uzbek", "english", "russian"],
@@ -157,17 +159,18 @@ export const booksData: Book[] = [
     id: "4",
     title: "Alkimyogar",
     author: "Paulo Coelho",
-    image: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?q=80&w=800&auto=format&fit=crop",
+    image: "/images/books/alkimyogar.png",
     thumbnails: [
-      "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?q=80&w=400&auto=format&fit=crop"
+        "/images/books/alkimyogar.png",
+        "/images/books/alkimyogar.png"
     ],
     price: "95,000 UZS",
-    description: "A journey of self-discovery.",
+    description: "O'z orzularingiz ortidan borish va hayotiy sarguzashtlar haqida falsafiy asar.",
     rating: 4.6,
     reviewsCount: 89,
     languageOptions: ["uzbek", "russian"],
     bookTypes: ["paper"],
-    stock: 2,
+    stock: 20,
     alternativeSellers: [],
     comments: []
   }

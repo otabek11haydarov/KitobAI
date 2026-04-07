@@ -1,0 +1,3 @@
+﻿src/app/ai/[chatId]/page.tsx(14,61): error TS2322: Type '{ chatId: string; book: Book | undefined; }' is not assignable to type 'IntrinsicAttributes & { chatId: string; }'.
+  Property 'book' does not exist on type 'IntrinsicAttributes & { chatId: string; }'.
+src/app/layout.tsx(3,8): error TS2882: Cannot find module or type declarations for side-effect import of './globals.css'.

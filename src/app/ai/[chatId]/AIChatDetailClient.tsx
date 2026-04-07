@@ -18,9 +18,9 @@ export default function AIChatDetailClient({ chatId }: { chatId: string }) {
     if (saved) {
       const chats: ChatSession[] = JSON.parse(saved);
       setAllSessions(chats);
-      
+
       let current = chats.find(c => c.id === chatId);
-      
+
       // Handle special pinned IDs if they don't exist yet
       if (!current && (chatId === 'read' || chatId === 'planning')) {
         current = {
@@ -30,7 +30,7 @@ export default function AIChatDetailClient({ chatId }: { chatId: string }) {
           createdAt: new Date().toISOString()
         };
       }
-      
+
       if (current) {
         setSession(current);
       }
@@ -50,7 +50,7 @@ export default function AIChatDetailClient({ chatId }: { chatId: string }) {
 
     const userMsg = input.trim();
     const updatedMessages = [...session.messages, { role: 'user' as const, text: userMsg }];
-    
+
     // Update local state first for immediate UI feedback
     const updatedSession = { ...session, messages: updatedMessages };
     setSession(updatedSession);
@@ -61,26 +61,29 @@ export default function AIChatDetailClient({ chatId }: { chatId: string }) {
 
     // Call Real AI API
     setIsTyping(true);
-    
+
     try {
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          messages: updatedMessages,
+          messages: updatedMessages.map(m => ({
+            role: m.role === 'ai' ? 'assistant' : 'user',
+            content: m.text
+          })),
           bookName: session.bookName
         })
       });
-      
+
       const data = await response.json();
       const aiResponse = { role: 'ai' as const, text: data.text || "Kechirasiz, javob olishda xatolik yuz berdi." };
-      
+
       const finalMessages = [...updatedMessages, aiResponse];
       const finalSession = { ...updatedSession, messages: finalMessages };
-      
+
       // If the chat didn't have a book name, attempt to update it from first real user message
       if (session.bookName === "Yangi Chat" || session.bookName === "Nomsiz Chat") {
-         finalSession.bookName = userMsg.length < 30 ? userMsg : "Kitob Tahlili";
+        finalSession.bookName = userMsg.length < 30 ? userMsg : "Kitob Tahlili";
       }
 
       setSession(finalSession);
@@ -97,14 +100,14 @@ export default function AIChatDetailClient({ chatId }: { chatId: string }) {
   const saveSession = (updated: ChatSession) => {
     const saved = localStorage.getItem('kitobai_chats');
     let chats: ChatSession[] = saved ? JSON.parse(saved) : [];
-    
+
     const index = chats.findIndex(c => c.id === updated.id);
     if (index !== -1) {
       chats[index] = updated;
     } else {
       chats.push(updated);
     }
-    
+
     localStorage.setItem('kitobai_chats', JSON.stringify(chats));
     setAllSessions(chats);
   };
@@ -128,14 +131,14 @@ export default function AIChatDetailClient({ chatId }: { chatId: string }) {
                 </div>
               ) : (
                 <div className="bg-primary bg-opacity-10 text-primary p-3 rounded-4 shadow-sm">
-                   {chatId === 'read' ? <BookOpen size={24} /> : <Sparkles size={24} />}
+                  {chatId === 'read' ? <BookOpen size={24} /> : <Sparkles size={24} />}
                 </div>
               )}
               <div>
                 <h5 className="fw-black m-0 text-dark">{session.bookName}</h5>
                 <p className="text-primary small m-0 fw-bold d-flex align-items-center gap-1">
-                   <div className="bg-success rounded-circle" style={{ width: '6px', height: '6px' }}></div>
-                   AI Assistant Onlayn
+                  <div className="bg-success rounded-circle" style={{ width: '6px', height: '6px' }}></div>
+                  AI Assistant Onlayn
                 </p>
               </div>
             </div>
@@ -150,7 +153,7 @@ export default function AIChatDetailClient({ chatId }: { chatId: string }) {
         <aside className="d-none d-lg-flex flex-column border-end border-light-subtle bg-white flex-shrink-0" style={{ width: '320px' }}>
           <div className="p-4 border-bottom border-light-subtle fw-bold text-dark d-flex align-items-center justify-content-between">
             <span className="d-flex align-items-center gap-2"><MessageSquare size={18} className="text-primary" /> Tarix</span>
-            <button onClick={() => window.location.href='/ai'} className="btn btn-light btn-sm rounded-circle"><Plus size={16}/></button>
+            <button onClick={() => window.location.href = '/ai'} className="btn btn-light btn-sm rounded-circle"><Plus size={16} /></button>
           </div>
           <div className="overflow-auto p-2 d-flex flex-column gap-1" style={{ scrollbarWidth: 'thin' }}>
             {allSessions.map((s) => (
@@ -160,7 +163,7 @@ export default function AIChatDetailClient({ chatId }: { chatId: string }) {
                 onClick={() => window.location.href = `/ai/${s.id}`}
               >
                 <div className={`rounded-3 overflow-hidden flex-shrink-0 ${chatId === s.id ? 'opacity-100' : 'opacity-75'}`} style={{ width: '30px', height: '40px' }}>
-                  {s.image ? <img src={s.image} className="w-100 h-100" style={{ objectFit: 'cover' }} alt="book" /> : <div className="w-100 h-100 bg-light d-flex align-items-center justify-content-center"><BookOpen size={14}/></div>}
+                  {s.image ? <img src={s.image} className="w-100 h-100" style={{ objectFit: 'cover' }} alt="book" /> : <div className="w-100 h-100 bg-light d-flex align-items-center justify-content-center"><BookOpen size={14} /></div>}
                 </div>
                 <span className="flex-grow-1 text-truncate small">{s.bookName}</span>
               </div>
@@ -171,10 +174,10 @@ export default function AIChatDetailClient({ chatId }: { chatId: string }) {
         {/* Chat Interface */}
         <section className="flex-grow-1 d-flex flex-column bg-white overflow-hidden">
           {/* Messages Area - Scrollable */}
-          <div 
-            ref={scrollRef} 
-            className="flex-grow-1 overflow-auto p-4 d-flex flex-column gap-4" 
-            style={{ 
+          <div
+            ref={scrollRef}
+            className="flex-grow-1 overflow-auto p-4 d-flex flex-column gap-4"
+            style={{
               scrollBehavior: 'smooth',
               scrollbarWidth: 'thin'
             }}
@@ -199,11 +202,12 @@ export default function AIChatDetailClient({ chatId }: { chatId: string }) {
                 </div>
                 <div
                   className={`p-3 px-4 rounded-4 shadow-premium-sm ${msg.role === 'user' ? 'bg-primary text-white' : 'bg-light text-dark border-0'}`}
-                  style={{ 
-                    borderBottomRightRadius: msg.role === 'user' ? '4px' : '1.25rem', 
+                  style={{
+                    borderBottomRightRadius: msg.role === 'user' ? '4px' : '1.25rem',
                     borderBottomLeftRadius: msg.role === 'ai' ? '4px' : '1.25rem',
-                    fontSize: '0.95rem',
-                    lineHeight: '1.6'
+                    fontSize: '18px',
+                    lineHeight: '1.7',
+                    whiteSpace: 'pre-wrap'
                   }}
                 >
                   {msg.text}
@@ -217,9 +221,9 @@ export default function AIChatDetailClient({ chatId }: { chatId: string }) {
                   <Bot size={20} />
                 </div>
                 <div className="bg-light p-3 px-4 rounded-4 d-flex align-items-center gap-2 shadow-sm">
-                   <div className="typing-dot"></div>
-                   <div className="typing-dot"></div>
-                   <div className="typing-dot"></div>
+                  <div className="typing-dot"></div>
+                  <div className="typing-dot"></div>
+                  <div className="typing-dot"></div>
                 </div>
               </motion.div>
             )}

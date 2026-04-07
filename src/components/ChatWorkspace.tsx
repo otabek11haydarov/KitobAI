@@ -1,34 +1,79 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react';
-import { Send, BookOpen, MessageSquare, Sparkles, Plus, History } from 'lucide-react';
+import { Send, BookOpen, Plus, History } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
 export default function ChatWorkspace({ bookTitle }: { bookTitle: string }) {
-  const [messages, setMessages] = useState<any[]>([
-    { role: 'assistant', content: `Salom! "${bookTitle}" asari bo‘yicha tahlillarimizni boshlashga tayyorman. Qaysi qismini chuqurroq ko'rib chiqamiz?` }
+  const [messages, setMessages] = useState<Message[]>([
+    { role: 'assistant', content: `Salom! "${bookTitle}" asari bo'yicha tahlillarimizni boshlashga tayyorman. Qaysi qismini chuqurroq ko'rib chiqamiz?` }
   ]);
   const [input, setInput] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
-  }, [messages, isTyping]);
+  }, [messages, isLoading]);
 
-  const handleSend = () => {
-    if (!input.trim()) return;
-    const userMsg = input;
+  const handleSend = async () => {
+    const userMsg = input.trim();
+    if (!userMsg || isLoading) return;
+
     setInput('');
-    setMessages(prev => [...prev, { role: 'user', content: userMsg }]);
-    setIsTyping(true);
+    setError(null);
+    const updatedMessages: Message[] = [...messages, { role: 'user', content: userMsg }];
+    setMessages(updatedMessages);
+    setIsLoading(true);
 
-    setTimeout(() => {
-      setMessages(prev => [...prev, { role: 'assistant', content: `"${bookTitle}" asarida bu mavzu juda muhim o'rin tutadi. Muallif aynan shu jihat orqali kitobxonni o'z irodasining erkinligi haqida o'ylashga undaydi.` }]);
-      setIsTyping(false);
-    }, 1500);
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          messages: updatedMessages.map(m => ({ role: m.role, content: m.content })),
+          bookName: bookTitle,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || data.error) {
+        const errorText = data?.text || "Kechirasiz, AI bilan bog'lanishda xatolik yuz berdi.";
+        setError(errorText);
+        setMessages(prev => [...prev, { role: 'assistant', content: errorText }]);
+        return;
+      }
+
+      const aiText = data?.text;
+      if (!aiText) {
+        throw new Error('Empty response from API');
+      }
+
+      setMessages(prev => [...prev, { role: 'assistant', content: aiText }]);
+    } catch {
+      const fallbackMsg = "Kechirasiz, tarmoq xatosi yuz berdi. Iltimos, qaytadan urinib ko'ring.";
+      setError(fallbackMsg);
+      setMessages(prev => [...prev, { role: 'assistant', content: fallbackMsg }]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleNewChat = () => {
+    setMessages([
+      { role: 'assistant', content: `"${bookTitle}" asari bo'yicha yangi suhbat boshlandi. Savolingizni bering!` }
+    ]);
+    setError(null);
+    setInput('');
   };
 
   return (
@@ -36,22 +81,29 @@ export default function ChatWorkspace({ bookTitle }: { bookTitle: string }) {
       {/* Header */}
       <div className="navbar bg-body border-bottom border-light-subtle p-4 d-flex align-items-center justify-content-between sticky-top z-index-2 glass">
          <div className="d-flex align-items-center gap-4">
-            <div className="p-3 bg-dark-subtle rounded-4 d-flex align-items-center justify-content-center shadow-lg position-relative overflow-hidden group">
+            <div className="p-3 bg-dark-subtle rounded-4 d-flex align-items-center justify-content-center shadow-lg position-relative overflow-hidden">
                <BookOpen className="text-secondary" size={28} />
-               <div className="position-absolute inset-0 bg-primary opacity-0 transition-opacity group-hover-opacity-10 pointer-events-none" />
             </div>
             <div>
               <div className="d-flex align-items-center gap-2 mb-1">
-                <span className="bg-primary rounded-circle shadow-lg shadow-primary-50" style={{ width: '8px', height: '8px' }} />
+                <span
+                  className={`rounded-circle ${isLoading ? 'bg-warning' : 'bg-primary'} shadow-lg`}
+                  style={{ width: '8px', height: '8px', display: 'inline-block' }}
+                />
                 <h2 className="h4 fw-black m-0 tracking-tight">{bookTitle}</h2>
               </div>
-              <p className="small text-secondary fw-black text-uppercase tracking-widest mb-0 opacity-50" style={{ fontSize: '9px' }}>Expert adabiy tahlil tizimi</p>
+              <p className="small text-secondary fw-black text-uppercase tracking-widest mb-0 opacity-50" style={{ fontSize: '9px' }}>
+                {isLoading ? 'AI javob yozmoqda...' : 'Expert adabiy tahlil tizimi'}
+              </p>
             </div>
          </div>
          
          <div className="d-flex gap-3">
             <button className="btn btn-outline-secondary rounded-4 p-3 shadow-sm border-light-subtle"><History size={18} /></button>
-            <button className="btn btn-dark d-flex align-items-center gap-2 px-5 py-3 rounded-4 fw-black small text-uppercase tracking-widest hover-scale-105 transition-all shadow-lg shadow-dark-50">
+            <button
+              onClick={handleNewChat}
+              className="btn btn-dark d-flex align-items-center gap-2 px-5 py-3 rounded-4 fw-black small text-uppercase tracking-widest hover-scale-105 transition-all shadow-lg"
+            >
                <Plus size={18} /> YANGI CHAT
             </button>
          </div>
@@ -75,10 +127,10 @@ export default function ChatWorkspace({ bookTitle }: { bookTitle: string }) {
               <div 
                 className={`p-5 p-md-5 rounded-5 fs-5 fw-medium leading-relaxed transition-all shadow-sm ${
                   msg.role === 'user' 
-                    ? 'bg-primary text-white rounded-bottom-end-0 shadow-lg shadow-primary-50' 
+                    ? 'bg-primary text-white rounded-bottom-end-0 shadow-lg' 
                     : 'bg-body-secondary border border-light-subtle rounded-bottom-start-0 text-body'
                 }`}
-                style={{ maxWidth: '85%' }}
+                style={{ maxWidth: '85%', whiteSpace: 'pre-wrap' }}
               >
                 {msg.content}
               </div>
@@ -86,12 +138,19 @@ export default function ChatWorkspace({ bookTitle }: { bookTitle: string }) {
           ))}
         </AnimatePresence>
         
-        {isTyping && (
+        {isLoading && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="d-flex justify-content-start p-2">
-             <div className="d-flex gap-1">
-                <span className="bg-primary rounded-circle animate-bounce" style={{ width: '8px', height: '8px', animationDelay: '0ms' }} />
-                <span className="bg-primary rounded-circle animate-bounce" style={{ width: '8px', height: '8px', animationDelay: '150ms' }} />
-                <span className="bg-primary rounded-circle animate-bounce" style={{ width: '8px', height: '8px', animationDelay: '300ms' }} />
+             <div className="d-flex gap-1 align-items-center">
+                {[0, 150, 300].map((delay) => (
+                  <span
+                    key={delay}
+                    className="bg-primary rounded-circle"
+                    style={{
+                      width: '8px', height: '8px', display: 'inline-block',
+                      animation: `bounce 1s infinite ${delay}ms`
+                    }}
+                  />
+                ))}
              </div>
           </motion.div>
         )}
@@ -99,10 +158,17 @@ export default function ChatWorkspace({ bookTitle }: { bookTitle: string }) {
 
       {/* Footer */}
       <div className="p-5 sticky-bottom bg-gradient-to-t from-body via-body to-transparent pt-10">
-         <div className="container-md position-relative group" style={{ maxWidth: '900px' }}>
-            <div className="position-absolute bottom-100 start-0 w-100 p-4 d-flex gap-2 overflow-x-auto scrollbar-hide mb-2 opacity-0 group-focus-within-opacity-100 transition-opacity translate-y-2 group-focus-within-translate-0 shadow-sm glass rounded-4">
-               {['Asosiy qahramonlar', 'Philosophical meaning', 'Hidden symbols'].map(t => (
-                 <button key={t} onClick={() => setInput(t)} className="btn btn-sm btn-light border-light-subtle rounded-pill text-nowrap small px-3 py-2 fw-black">{t}</button>
+         <div className="container-md position-relative" style={{ maxWidth: '900px' }}>
+            <div className="d-flex gap-2 overflow-x-auto scrollbar-hide mb-3">
+               {['Asosiy qahramonlar', 'Falsafiy ma\'no', 'Yashirin ramzlar'].map(t => (
+                 <button
+                   key={t}
+                   onClick={() => setInput(t)}
+                   disabled={isLoading}
+                   className="btn btn-sm btn-light border-light-subtle rounded-pill text-nowrap small px-3 py-2 fw-black"
+                 >
+                   {t}
+                 </button>
                ))}
             </div>
             <div className="input-group p-2 bg-body border border-light-subtle rounded-5 shadow-lg position-relative z-index-1">
@@ -110,13 +176,14 @@ export default function ChatWorkspace({ bookTitle }: { bookTitle: string }) {
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+                onKeyDown={(e) => e.key === 'Enter' && !e.shiftKey && handleSend()}
                 placeholder="Tanlangan kitob haqida savol bering..."
+                disabled={isLoading}
                 className="form-control border-0 bg-transparent py-4 px-5 fs-5 shadow-none ps-5"
                />
                <button 
                 onClick={handleSend}
-                disabled={!input.trim() || isTyping}
+                disabled={!input.trim() || isLoading}
                 className="btn btn-dark rounded-4 px-5 py-4 fw-black ms-2 shadow-lg hover-scale-105 transition-all d-flex align-items-center justify-content-center"
                >
                  <Send size={24} />
