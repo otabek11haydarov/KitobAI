@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 import SidebarNavigation from '../components/SidebarNavigation';
 import ChatWorkspace from '../components/ChatWorkspace';
@@ -18,24 +19,74 @@ export default function Home() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentSection, setCurrentSection] = useState<'chats' | 'planner' | 'finished' | 'settings'>('chats');
+  const [activeSegment, setActiveSegment] = useState('');
   const [workspaces, setWorkspaces] = useState([
     { id: 'ws-1', bookTitle: '1984' },
     { id: 'ws-2', bookTitle: 'Sapiens' },
     { id: 'ws-3', bookTitle: 'Alkimyogar' }
   ]);
 
+  useEffect(() => {
+    // Restore session if within 5 hours
+    const expiry = localStorage.getItem('session_expiry');
+    if (expiry && Date.now() < parseInt(expiry)) {
+      setIsLoggedIn(true);
+    } else {
+      localStorage.removeItem('session_expiry');
+    }
+  }, []);
+
+  const handleLoginSuccess = () => {
+    setIsAuthModalOpen(false);
+    setIsLoggedIn(true);
+    // 5 hours = 5 * 60 * 60 * 1000 milliseconds
+    localStorage.setItem('session_expiry', (Date.now() + 5 * 60 * 60 * 1000).toString());
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setShowDropdown(false);
+    localStorage.removeItem('session_expiry');
+  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['ai', 'community', 'contact'];
+      let current = '';
+      for (const section of sections) {
+        const el = document.getElementById(section);
+        if (el && window.scrollY >= (el.offsetTop - 120)) {
+          current = section;
+        }
+      }
+      setActiveSegment(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({ top: element.offsetTop - 80, behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
+
   if (isWorkspace) {
     return (
       <main className="d-flex vh-100 bg-dark text-body overflow-hidden" data-bs-theme="dark">
-        <SidebarNavigation 
-          currentSection={currentSection} 
-          setCurrentSection={setCurrentSection} 
+        <SidebarNavigation
+          currentSection={currentSection}
+          setCurrentSection={setCurrentSection}
           workspaces={workspaces}
-          onNewChat={() => {}}
+          onNewChat={() => { }}
         />
-        
+
         <div className="flex-grow-1 d-flex flex-column position-relative h-100 bg-body-tertiary text-body">
-          <button 
+          <button
             onClick={() => setIsWorkspace(false)}
             className="btn btn-light position-absolute top-0 start-0 m-4 z-index-master p-3 rounded-4 shadow-sm border"
             style={{ zIndex: 1050 }}
@@ -46,7 +97,7 @@ export default function Home() {
           <div className="flex-grow-1 overflow-hidden h-100">
             <AnimatePresence mode="wait">
               {currentSection === 'chats' && (
-                <motion.div 
+                <motion.div
                   key="chats"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -57,7 +108,7 @@ export default function Home() {
                 </motion.div>
               )}
               {currentSection === 'planner' && (
-                <motion.div 
+                <motion.div
                   key="planner"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -68,7 +119,7 @@ export default function Home() {
                 </motion.div>
               )}
               {currentSection === 'finished' && (
-                <motion.div 
+                <motion.div
                   key="finished"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -90,7 +141,7 @@ export default function Home() {
       {/* Modern Full-Width Navigation */}
       <nav className="fixed-top w-100 bg-white border-bottom border-light-subtle shadow-sm transition-all" style={{ zIndex: 1040 }}>
         <div className="container-fluid px-4 px-lg-5 py-3 d-flex justify-content-between align-items-center mx-auto" style={{ maxWidth: '1400px' }}>
-          
+
           {/* Left Side: Logo */}
           <div className="d-flex align-items-center gap-2 cursor-pointer transition-all hover-scale-101" onClick={() => window.scrollTo(0, 0)}>
             <div className="p-2 bg-primary bg-opacity-10 text-primary rounded-3 d-flex align-items-center justify-content-center">
@@ -101,17 +152,17 @@ export default function Home() {
 
           {/* Center: Desktop Navigation Links */}
           <div className="d-none d-md-flex align-items-center gap-4">
-            <a href="#ai" className="text-decoration-none text-secondary fw-medium hover-text-primary transition-all">Sun'iy Intellekt</a>
-            <a href="#community" className="text-decoration-none text-secondary fw-medium hover-text-primary transition-all">Hamjamiyat</a>
-            <a href="#marketplace" className="text-decoration-none text-secondary fw-medium hover-text-primary transition-all">Marketplace</a>
-            <a href="#contact" className="text-decoration-none text-secondary fw-medium hover-text-primary transition-all">Contact</a>
+            <a href="#ai" onClick={(e) => handleSmoothScroll(e, 'ai')} className={`text-decoration-none fw-bold transition-all py-1 border-bottom border-2 ${activeSegment === 'ai' ? 'text-primary border-primary' : 'text-secondary border-transparent hover-text-primary'}`}>Sun'iy Intellekt</a>
+            <a href="#community" onClick={(e) => handleSmoothScroll(e, 'community')} className={`text-decoration-none fw-bold transition-all py-1 border-bottom border-2 ${activeSegment === 'community' ? 'text-primary border-primary' : 'text-secondary border-transparent hover-text-primary'}`}>Hamjamiyat</a>
+            <a href="/marketplace" className={`text-decoration-none text-secondary fw-bold transition-all py-1 border-bottom border-2 border-transparent hover-text-primary`}>Marketplace</a>
+            <a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')} className={`text-decoration-none fw-bold transition-all py-1 border-bottom border-2 ${activeSegment === 'contact' ? 'text-primary border-primary' : 'text-secondary border-transparent hover-text-primary'}`}>Contact</a>
           </div>
 
           {/* Right Side: Profile / Mobile Toggle */}
           <div className="d-flex align-items-center gap-3">
             {isLoggedIn ? (
               <div className="position-relative">
-                <button 
+                <button
                   onClick={() => setShowDropdown(!showDropdown)}
                   className="btn btn-light rounded-circle p-2 shadow-sm transition-all hover-scale-105 active-scale-95 d-flex align-items-center justify-content-center bg-white border border-light-subtle"
                   style={{ width: '44px', height: '44px' }}
@@ -133,14 +184,14 @@ export default function Home() {
                         <p className="small text-secondary mb-0 text-truncate">user@kitobai.uz</p>
                       </div>
                       <div className="p-2 d-flex flex-column gap-1">
-                        <button 
+                        <button
                           onClick={() => { setShowDropdown(false); setIsWorkspace(true); }}
                           className="btn btn-sm btn-light bg-transparent border-0 text-start w-100 d-flex align-items-center gap-2 fw-medium px-3 py-2 text-dark hover-text-primary transition-all"
                         >
                           <Settings size={16} /> Dashboard
                         </button>
-                        <button 
-                          onClick={() => { setIsLoggedIn(false); setShowDropdown(false); }}
+                        <button
+                          onClick={handleLogout}
                           className="btn btn-sm btn-light bg-transparent border-0 text-start w-100 d-flex align-items-center gap-2 text-danger fw-medium px-3 py-2 hover-text-danger transition-all"
                         >
                           <LogOut size={16} /> Chiqish
@@ -151,7 +202,7 @@ export default function Home() {
                 </AnimatePresence>
               </div>
             ) : (
-              <button 
+              <button
                 onClick={() => setIsAuthModalOpen(true)}
                 className="btn btn-primary rounded-pill fw-bold px-4 py-2 shadow-sm transition-all hover-scale-105 active-scale-95 d-flex align-items-center gap-2"
               >
@@ -161,7 +212,7 @@ export default function Home() {
             )}
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
               className="btn btn-light d-md-none p-2 rounded-3 border border-light-subtle d-flex align-items-center justify-content-center bg-white"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
@@ -180,10 +231,10 @@ export default function Home() {
               className="d-md-none bg-white border-top border-light-subtle overflow-hidden"
             >
               <div className="container-fluid px-4 py-3 d-flex flex-column gap-2">
-                <a href="#ai" className="text-decoration-none text-secondary fw-medium px-3 py-2 rounded-3 transition-all" style={{ backgroundColor: '#f9fafb' }} onClick={() => setIsMobileMenuOpen(false)}>Sun'iy Intellekt</a>
-                <a href="#community" className="text-decoration-none text-secondary fw-medium px-3 py-2 rounded-3 transition-all" style={{ backgroundColor: '#f9fafb' }} onClick={() => setIsMobileMenuOpen(false)}>Hamjamiyat</a>
-                <a href="#marketplace" className="text-decoration-none text-secondary fw-medium px-3 py-2 rounded-3 transition-all" style={{ backgroundColor: '#f9fafb' }} onClick={() => setIsMobileMenuOpen(false)}>Marketplace</a>
-                <a href="#contact" className="text-decoration-none text-secondary fw-medium px-3 py-2 rounded-3 transition-all" style={{ backgroundColor: '#f9fafb' }} onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
+                <a href="#ai" onClick={(e) => handleSmoothScroll(e, 'ai')} className={`text-decoration-none fw-bold px-3 py-2 rounded-3 transition-all ${activeSegment === 'ai' ? 'bg-primary bg-opacity-10 text-primary' : 'text-secondary bg-light'}`}>Sun'iy Intellekt</a>
+                <a href="#community" onClick={(e) => handleSmoothScroll(e, 'community')} className={`text-decoration-none fw-bold px-3 py-2 rounded-3 transition-all ${activeSegment === 'community' ? 'bg-primary bg-opacity-10 text-primary' : 'text-secondary bg-light'}`}>Hamjamiyat</a>
+                <a href="/marketplace" className={`text-decoration-none text-secondary fw-bold px-3 py-2 rounded-3 transition-all bg-light`}>Marketplace</a>
+                <a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')} className={`text-decoration-none fw-bold px-3 py-2 rounded-3 transition-all ${activeSegment === 'contact' ? 'bg-primary bg-opacity-10 text-primary' : 'text-secondary bg-light'}`}>Contact</a>
               </div>
             </motion.div>
           )}
@@ -191,22 +242,22 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="position-relative d-flex align-items-center justify-content-center min-vh-100 pt-5 pb-5 mt-5">
+      <section id="ai" className="position-relative d-flex align-items-center justify-content-center min-vh-100 pt-5 pb-5 mt-5">
         <div className="container py-5">
           <div className="text-center mb-5">
             <h1 className="display-4 fw-bold tracking-tight mb-3">
               Platforma <span className="text-primary">kitobxonlar</span> uchun
             </h1>
             <p className="lead text-secondary mx-auto mb-5" style={{ maxWidth: '600px' }}>
-              Barcha ehtiyojlaringizni bir joyda jamlagan zamonaviy va qulay muhit. 
+              Barcha ehtiyojlaringizni bir joyda jamlagan zamonaviy va qulay muhit.
             </p>
           </div>
-          
+
           <div className="row g-4 justify-content-center mx-auto" style={{ maxWidth: '1000px' }}>
             <div className="col-md-6">
-              <div 
+              <div
                 className="card h-100 border-0 transition-all outline-none shadow-premium hover-scale-101 cursor-pointer d-flex flex-column align-items-center text-center"
-                style={{ 
+                style={{
                   padding: '4rem 3rem',
                   borderRadius: '2rem',
                   background: 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)'
@@ -222,11 +273,11 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            
+
             <div className="col-md-6">
-              <div 
+              <div
                 className="card h-100 border-0 transition-all outline-none shadow-premium hover-scale-101 cursor-pointer d-flex flex-column align-items-center text-center"
-                style={{ 
+                style={{
                   padding: '4rem 3rem',
                   borderRadius: '2rem',
                   background: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)'
@@ -246,8 +297,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Best Seller Books Section */}
-      <section className="py-5 bg-body-tertiary" id="best-sellers">
+      {/* Best Seller Books Section (Community/Featured) */}
+      <section className="py-5 bg-body-tertiary" id="community">
         <div className="container py-5">
           <div className="d-flex justify-content-between align-items-end mb-5">
             <div>
@@ -270,9 +321,9 @@ export default function Home() {
                       <span className="fw-black text-primary fs-5">{book.price}</span>
                     </div>
                     <p className="small text-secondary mb-4 flex-grow-1" style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{book.description}</p>
-                    
+
                     <div className="d-flex flex-column gap-2 mt-auto pt-3">
-                      <button 
+                      <button
                         className="btn btn-primary w-100 fw-bold py-2 shadow-sm rounded-3 transition-all"
                         onClick={() => window.location.href = `/book/${book.id}`}
                       >
@@ -291,14 +342,14 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-4 border-top border-light-subtle mt-auto bg-body">
+      <footer id="contact" className="py-4 border-top border-light-subtle mt-auto bg-body">
         <div className="container">
           <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
             <div className="d-flex align-items-center gap-2">
               <BookOpen className="text-primary" size={20} />
               <span className="fw-bold">KitobAI</span>
             </div>
-            
+
             <div className="d-flex gap-4 small fw-medium">
               <a href="#" className="text-secondary text-decoration-none transition-all hover-scale-101">About</a>
               <a href="#" className="text-secondary text-decoration-none transition-all hover-scale-101">Contact</a>
@@ -309,13 +360,10 @@ export default function Home() {
       </footer>
 
       {/* Auth Modal */}
-      <AuthModal 
-        isOpen={isAuthModalOpen} 
-        onClose={() => setIsAuthModalOpen(false)} 
-        onSuccess={() => {
-          setIsAuthModalOpen(false);
-          setIsLoggedIn(true);
-        }}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
+        onSuccess={handleLoginSuccess}
       />
     </main>
   );

@@ -1,0 +1,1269 @@
+{
+  "books": [
+    {
+      "\ufeffid": "1",
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Dystopian",
+      "year": "1949",
+      "rating": "4.8",
+      "description": "A chilling look at a totalitarian future where Big Brother is always watching.",
+      "image_url": "https://covers.openlibrary.org/b/title/1984-L.jpg"
+    },
+    {
+      "\ufeffid": "2",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Classic",
+      "year": "1960",
+      "rating": "4.9",
+      "description": "A profound story showing the loss of innocence in a racially divided South.",
+      "image_url": "https://covers.openlibrary.org/b/title/to+kill+a+mockingbird-L.jpg"
+    },
+    {
+      "\ufeffid": "3",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": "Modernist",
+      "year": "1925",
+      "rating": "4.5",
+      "description": "A story of ambition, love, and the elusive American Dream in the Roaring Twenties.",
+      "image_url": "https://covers.openlibrary.org/b/title/the+great+gatsby-L.jpg"
+    },
+    {
+      "\ufeffid": "4",
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel Garcia Marquez",
+      "genre": "Magic Realism",
+      "year": "1967",
+      "rating": "4.7",
+      "description": "The multi-generational story of the Buendia family in the town of Macondo.",
+      "image_url": "https://covers.openlibrary.org/b/title/one+hundred+years+of+solitude-L.jpg"
+    },
+    {
+      "\ufeffid": "5",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "genre": "Romance",
+      "year": "1813",
+      "rating": "4.8",
+      "description": "Sparkling study of the manners and morals of the 19th-century British gentry.",
+      "image_url": "https://covers.openlibrary.org/b/title/pride+and+prejudice-L.jpg"
+    },
+    {
+      "\ufeffid": "6",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "genre": "Modernist",
+      "year": "1951",
+      "rating": "4.2",
+      "description": "A narrative of teenage angst and rebellion through the eyes of Holden Caulfield.",
+      "image_url": "https://covers.openlibrary.org/b/title/the+catcher+in+the+rye-L.jpg"
+    },
+    {
+      "\ufeffid": "7",
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "year": "1937",
+      "rating": "4.9",
+      "description": "The adventure of Bilbo Baggins as he sets out to reclaim a treasure from a dragon.",
+      "image_url": "https://covers.openlibrary.org/b/title/the+hobbit-L.jpg"
+    },
+    {
+      "\ufeffid": "8",
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "genre": "Fantasy",
+      "year": "1997",
+      "rating": "4.8",
+      "description": "A boy discovers on his eleventh birthday that he is a wizard and is invited to Hogwarts.",
+      "image_url": "https://covers.openlibrary.org/b/title/harry+potter+and+the+sorcerer%27s+stone-L.jpg"
+    },
+    {
+      "\ufeffid": "9",
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "genre": "Adventure",
+      "year": "1988",
+      "rating": "4.7",
+      "description": "A shepherd's journey to find buried treasure in the Egyptian pyramids.",
+      "image_url": "https://covers.openlibrary.org/b/title/the+alchemist-L.jpg"
+    },
+    {
+      "\ufeffid": "10",
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "genre": "Dystopian",
+      "year": "1932",
+      "rating": "4.6",
+      "description": "A vision of a futuristic society where happiness is manufactured and individuality is lost.",
+      "image_url": "https://covers.openlibrary.org/b/title/brave+new+world-L.jpg"
+    },
+    {
+      "\ufeffid": "11",
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "year": "1954",
+      "rating": "5.0",
+      "description": "An epic quest to destroy the One Ring and defeat the Dark Lord Sauron.",
+      "image_url": "https://covers.openlibrary.org/b/title/the+lord+of+the+rings-L.jpg"
+    },
+    {
+      "\ufeffid": "12",
+      "title": "The Diary of a Young Girl",
+      "author": "Anne Frank",
+      "genre": "Biography",
+      "year": "1947",
+      "rating": "4.9",
+      "description": "Personal account of a young Jewish girl's life while hiding from the Nazis.",
+      "image_url": "https://covers.openlibrary.org/b/title/the+diary+of+a+young+girl-L.jpg"
+    }
+  ],
+  "marketplace": [
+    {
+      "id": "list_1",
+      "title": "1984",
+      "author": "George Orwell",
+      "store_name": "ZoodMall",
+      "price": 153821,
+      "currency": "UZS",
+      "product_url": "https://www.zoodmall.uz/product/1984",
+      "image_url": "https://covers.openlibrary.org/b/title/1984-L.jpg",
+      "in_stock": true,
+      "rating": 4.1,
+      "reviews_count": 233,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_3",
+      "title": "1984",
+      "author": "George Orwell",
+      "store_name": "Asaxiy",
+      "price": 167129,
+      "currency": "UZS",
+      "product_url": "https://www.asaxiy.uz/product/1984",
+      "image_url": "https://covers.openlibrary.org/b/title/1984-L.jpg",
+      "in_stock": true,
+      "rating": 5.0,
+      "reviews_count": 477,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_4",
+      "title": "1984",
+      "author": "George Orwell",
+      "store_name": "Ozon",
+      "price": 174359,
+      "currency": "UZS",
+      "product_url": "https://www.ozon.ru/product/1984",
+      "image_url": "https://covers.openlibrary.org/b/title/1984-L.jpg",
+      "in_stock": true,
+      "rating": 4.8,
+      "reviews_count": 166,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_2",
+      "title": "1984",
+      "author": "George Orwell",
+      "store_name": "Amazon",
+      "price": 20.13,
+      "currency": "USD",
+      "product_url": "https://www.amazon.com/product/1984",
+      "image_url": "https://covers.openlibrary.org/b/title/1984-L.jpg",
+      "in_stock": false,
+      "rating": 4.1,
+      "reviews_count": 70,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_5",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "store_name": "Asaxiy",
+      "price": 93362,
+      "currency": "UZS",
+      "product_url": "https://www.asaxiy.uz/product/to+kill+a+mockingbird",
+      "image_url": "https://covers.openlibrary.org/b/title/to+kill+a+mockingbird-L.jpg",
+      "in_stock": true,
+      "rating": 3.6,
+      "reviews_count": 411,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_7",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "store_name": "ZoodMall",
+      "price": 145458,
+      "currency": "UZS",
+      "product_url": "https://www.zoodmall.uz/product/to+kill+a+mockingbird",
+      "image_url": "https://covers.openlibrary.org/b/title/to+kill+a+mockingbird-L.jpg",
+      "in_stock": true,
+      "rating": 4.8,
+      "reviews_count": 4,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_6",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "store_name": "Amazon",
+      "price": 19.52,
+      "currency": "USD",
+      "product_url": "https://www.amazon.com/product/to+kill+a+mockingbird",
+      "image_url": "https://covers.openlibrary.org/b/title/to+kill+a+mockingbird-L.jpg",
+      "in_stock": true,
+      "rating": 4.3,
+      "reviews_count": 92,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_9",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "store_name": "ZoodMall",
+      "price": 94157,
+      "currency": "UZS",
+      "product_url": "https://www.zoodmall.uz/product/the+great+gatsby",
+      "image_url": "https://covers.openlibrary.org/b/title/the+great+gatsby-L.jpg",
+      "in_stock": false,
+      "rating": 4.1,
+      "reviews_count": 457,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_8",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "store_name": "Asaxiy",
+      "price": 162121,
+      "currency": "UZS",
+      "product_url": "https://www.asaxiy.uz/product/the+great+gatsby",
+      "image_url": "https://covers.openlibrary.org/b/title/the+great+gatsby-L.jpg",
+      "in_stock": true,
+      "rating": 3.6,
+      "reviews_count": 27,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_10",
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel Garcia Marquez",
+      "store_name": "Asaxiy",
+      "price": 141485,
+      "currency": "UZS",
+      "product_url": "https://www.asaxiy.uz/product/one+hundred+years+of+solitude",
+      "image_url": "https://covers.openlibrary.org/b/title/one+hundred+years+of+solitude-L.jpg",
+      "in_stock": true,
+      "rating": 4.7,
+      "reviews_count": 322,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_13",
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel Garcia Marquez",
+      "store_name": "ZoodMall",
+      "price": 166760,
+      "currency": "UZS",
+      "product_url": "https://www.zoodmall.uz/product/one+hundred+years+of+solitude",
+      "image_url": "https://covers.openlibrary.org/b/title/one+hundred+years+of+solitude-L.jpg",
+      "in_stock": true,
+      "rating": 3.9,
+      "reviews_count": 476,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_12",
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel Garcia Marquez",
+      "store_name": "Ozon",
+      "price": 183458,
+      "currency": "UZS",
+      "product_url": "https://www.ozon.ru/product/one+hundred+years+of+solitude",
+      "image_url": "https://covers.openlibrary.org/b/title/one+hundred+years+of+solitude-L.jpg",
+      "in_stock": false,
+      "rating": 5.0,
+      "reviews_count": 234,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_11",
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel Garcia Marquez",
+      "store_name": "Amazon",
+      "price": 20.3,
+      "currency": "USD",
+      "product_url": "https://www.amazon.com/product/one+hundred+years+of+solitude",
+      "image_url": "https://covers.openlibrary.org/b/title/one+hundred+years+of+solitude-L.jpg",
+      "in_stock": true,
+      "rating": 4.9,
+      "reviews_count": 469,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_14",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "store_name": "ZoodMall",
+      "price": 107146,
+      "currency": "UZS",
+      "product_url": "https://www.zoodmall.uz/product/pride+and+prejudice",
+      "image_url": "https://covers.openlibrary.org/b/title/pride+and+prejudice-L.jpg",
+      "in_stock": true,
+      "rating": 3.7,
+      "reviews_count": 496,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_15",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "store_name": "Amazon",
+      "price": 29.6,
+      "currency": "USD",
+      "product_url": "https://www.amazon.com/product/pride+and+prejudice",
+      "image_url": "https://covers.openlibrary.org/b/title/pride+and+prejudice-L.jpg",
+      "in_stock": true,
+      "rating": 4.3,
+      "reviews_count": 286,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_17",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "store_name": "Amazon",
+      "price": 10.51,
+      "currency": "USD",
+      "product_url": "https://www.amazon.com/product/the+catcher+in+the+rye",
+      "image_url": "https://covers.openlibrary.org/b/title/the+catcher+in+the+rye-L.jpg",
+      "in_stock": true,
+      "rating": 4.1,
+      "reviews_count": 47,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_16",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "store_name": "ZoodMall",
+      "price": 144140,
+      "currency": "UZS",
+      "product_url": "https://www.zoodmall.uz/product/the+catcher+in+the+rye",
+      "image_url": "https://covers.openlibrary.org/b/title/the+catcher+in+the+rye-L.jpg",
+      "in_stock": false,
+      "rating": 4.2,
+      "reviews_count": 305,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_19",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "store_name": "Ozon",
+      "price": 161930,
+      "currency": "UZS",
+      "product_url": "https://www.ozon.ru/product/the+catcher+in+the+rye",
+      "image_url": "https://covers.openlibrary.org/b/title/the+catcher+in+the+rye-L.jpg",
+      "in_stock": true,
+      "rating": 4.0,
+      "reviews_count": 10,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_18",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "store_name": "Asaxiy",
+      "price": 179597,
+      "currency": "UZS",
+      "product_url": "https://www.asaxiy.uz/product/the+catcher+in+the+rye",
+      "image_url": "https://covers.openlibrary.org/b/title/the+catcher+in+the+rye-L.jpg",
+      "in_stock": true,
+      "rating": 4.5,
+      "reviews_count": 143,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_20",
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "store_name": "Ozon",
+      "price": 117958,
+      "currency": "UZS",
+      "product_url": "https://www.ozon.ru/product/the+hobbit",
+      "image_url": "https://covers.openlibrary.org/b/title/the+hobbit-L.jpg",
+      "in_stock": false,
+      "rating": 3.6,
+      "reviews_count": 380,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_21",
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "store_name": "Amazon",
+      "price": 20.74,
+      "currency": "USD",
+      "product_url": "https://www.amazon.com/product/the+hobbit",
+      "image_url": "https://covers.openlibrary.org/b/title/the+hobbit-L.jpg",
+      "in_stock": true,
+      "rating": 4.4,
+      "reviews_count": 61,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_22",
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "store_name": "Asaxiy",
+      "price": 107324,
+      "currency": "UZS",
+      "product_url": "https://www.asaxiy.uz/product/harry+potter+and+the+sorcerer%27s+stone",
+      "image_url": "https://covers.openlibrary.org/b/title/harry+potter+and+the+sorcerer%27s+stone-L.jpg",
+      "in_stock": true,
+      "rating": 4.4,
+      "reviews_count": 129,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_23",
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "store_name": "Ozon",
+      "price": 134815,
+      "currency": "UZS",
+      "product_url": "https://www.ozon.ru/product/harry+potter+and+the+sorcerer%27s+stone",
+      "image_url": "https://covers.openlibrary.org/b/title/harry+potter+and+the+sorcerer%27s+stone-L.jpg",
+      "in_stock": true,
+      "rating": 4.6,
+      "reviews_count": 305,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_24",
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "store_name": "Amazon",
+      "price": 18.58,
+      "currency": "USD",
+      "product_url": "https://www.amazon.com/product/harry+potter+and+the+sorcerer%27s+stone",
+      "image_url": "https://covers.openlibrary.org/b/title/harry+potter+and+the+sorcerer%27s+stone-L.jpg",
+      "in_stock": true,
+      "rating": 4.8,
+      "reviews_count": 217,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_25",
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "store_name": "ZoodMall",
+      "price": 146216,
+      "currency": "UZS",
+      "product_url": "https://www.zoodmall.uz/product/the+alchemist",
+      "image_url": "https://covers.openlibrary.org/b/title/the+alchemist-L.jpg",
+      "in_stock": true,
+      "rating": 4.6,
+      "reviews_count": 65,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_26",
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "store_name": "Amazon",
+      "price": 17.96,
+      "currency": "USD",
+      "product_url": "https://www.amazon.com/product/the+alchemist",
+      "image_url": "https://covers.openlibrary.org/b/title/the+alchemist-L.jpg",
+      "in_stock": true,
+      "rating": 4.3,
+      "reviews_count": 188,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_28",
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "store_name": "Asaxiy",
+      "price": 104081,
+      "currency": "UZS",
+      "product_url": "https://www.asaxiy.uz/product/brave+new+world",
+      "image_url": "https://covers.openlibrary.org/b/title/brave+new+world-L.jpg",
+      "in_stock": false,
+      "rating": 4.5,
+      "reviews_count": 62,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_27",
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "store_name": "Ozon",
+      "price": 151418,
+      "currency": "UZS",
+      "product_url": "https://www.ozon.ru/product/brave+new+world",
+      "image_url": "https://covers.openlibrary.org/b/title/brave+new+world-L.jpg",
+      "in_stock": true,
+      "rating": 3.6,
+      "reviews_count": 34,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_29",
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "store_name": "Asaxiy",
+      "price": 63539,
+      "currency": "UZS",
+      "product_url": "https://www.asaxiy.uz/product/the+lord+of+the+rings",
+      "image_url": "https://covers.openlibrary.org/b/title/the+lord+of+the+rings-L.jpg",
+      "in_stock": true,
+      "rating": 4.9,
+      "reviews_count": 110,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_30",
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "store_name": "Ozon",
+      "price": 174361,
+      "currency": "UZS",
+      "product_url": "https://www.ozon.ru/product/the+lord+of+the+rings",
+      "image_url": "https://covers.openlibrary.org/b/title/the+lord+of+the+rings-L.jpg",
+      "in_stock": true,
+      "rating": 4.5,
+      "reviews_count": 63,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_32",
+      "title": "The Diary of a Young Girl",
+      "author": "Anne Frank",
+      "store_name": "ZoodMall",
+      "price": 78451,
+      "currency": "UZS",
+      "product_url": "https://www.zoodmall.uz/product/the+diary+of+a+young+girl",
+      "image_url": "https://covers.openlibrary.org/b/title/the+diary+of+a+young+girl-L.jpg",
+      "in_stock": false,
+      "rating": 4.7,
+      "reviews_count": 92,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    },
+    {
+      "id": "list_31",
+      "title": "The Diary of a Young Girl",
+      "author": "Anne Frank",
+      "store_name": "Asaxiy",
+      "price": 105768,
+      "currency": "UZS",
+      "product_url": "https://www.asaxiy.uz/product/the+diary+of+a+young+girl",
+      "image_url": "https://covers.openlibrary.org/b/title/the+diary+of+a+young+girl-L.jpg",
+      "in_stock": true,
+      "rating": 4.2,
+      "reviews_count": 177,
+      "add_to_cart_enabled": true,
+      "buy_now_enabled": true,
+      "wishlist_enabled": true
+    }
+  ],
+  "users": [
+    {
+      "id": "usr_1",
+      "name": "User 1",
+      "email": "user1@example.com",
+      "password": "$2a$12$eImiTXuWVxfM37uY4JANjQ==_1",
+      "created_at": "2022-06-15T15:51:08Z"
+    },
+    {
+      "id": "usr_2",
+      "name": "User 2",
+      "email": "user2@example.com",
+      "password": "$2a$12$eImiTXuWVxfM37uY4JANjQ==_2",
+      "created_at": "2024-04-01T04:35:29Z"
+    },
+    {
+      "id": "usr_3",
+      "name": "User 3",
+      "email": "user3@example.com",
+      "password": "$2a$12$eImiTXuWVxfM37uY4JANjQ==_3",
+      "created_at": "2024-10-09T14:34:46Z"
+    },
+    {
+      "id": "usr_4",
+      "name": "User 4",
+      "email": "user4@example.com",
+      "password": "$2a$12$eImiTXuWVxfM37uY4JANjQ==_4",
+      "created_at": "2023-03-22T23:09:01Z"
+    },
+    {
+      "id": "usr_5",
+      "name": "User 5",
+      "email": "user5@example.com",
+      "password": "$2a$12$eImiTXuWVxfM37uY4JANjQ==_5",
+      "created_at": "2024-12-11T23:43:24Z"
+    },
+    {
+      "id": "usr_6",
+      "name": "User 6",
+      "email": "user6@example.com",
+      "password": "$2a$12$eImiTXuWVxfM37uY4JANjQ==_6",
+      "created_at": "2023-01-01T02:09:16Z"
+    },
+    {
+      "id": "usr_7",
+      "name": "User 7",
+      "email": "user7@example.com",
+      "password": "$2a$12$eImiTXuWVxfM37uY4JANjQ==_7",
+      "created_at": "2025-01-15T10:22:06Z"
+    },
+    {
+      "id": "usr_8",
+      "name": "User 8",
+      "email": "user8@example.com",
+      "password": "$2a$12$eImiTXuWVxfM37uY4JANjQ==_8",
+      "created_at": "2022-06-13T10:38:27Z"
+    },
+    {
+      "id": "usr_9",
+      "name": "User 9",
+      "email": "user9@example.com",
+      "password": "$2a$12$eImiTXuWVxfM37uY4JANjQ==_9",
+      "created_at": "2022-11-10T14:43:58Z"
+    },
+    {
+      "id": "usr_10",
+      "name": "User 10",
+      "email": "user10@example.com",
+      "password": "$2a$12$eImiTXuWVxfM37uY4JANjQ==_10",
+      "created_at": "2024-11-30T12:42:14Z"
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "ord_1",
+      "user_id": "usr_1",
+      "items": [
+        {
+          "title": "Fahrenheit 451",
+          "price": 132037
+        },
+        {
+          "title": "The Grapes of Wrath",
+          "price": 267375.0
+        },
+        {
+          "title": "Wuthering Heights",
+          "price": 107760
+        }
+      ],
+      "total_amount": 507172.0,
+      "currency": "UZS",
+      "payment_method": "click",
+      "status": "pending",
+      "purchased_at": "2025-11-12T19:08:51Z"
+    },
+    {
+      "order_id": "ord_2",
+      "user_id": "usr_1",
+      "items": [
+        {
+          "title": "Animal Farm",
+          "price": 184375.0
+        },
+        {
+          "title": "The Kite Runner",
+          "price": 165919
+        },
+        {
+          "title": "Kafka on the Shore",
+          "price": 90325
+        }
+      ],
+      "total_amount": 440619.0,
+      "currency": "UZS",
+      "payment_method": "click",
+      "status": "pending",
+      "purchased_at": "2024-02-25T16:41:39Z"
+    },
+    {
+      "order_id": "ord_3",
+      "user_id": "usr_2",
+      "items": [
+        {
+          "title": "The Grapes of Wrath",
+          "price": 267375.0
+        },
+        {
+          "title": "The Kite Runner",
+          "price": 194032
+        }
+      ],
+      "total_amount": 461407.0,
+      "currency": "UZS",
+      "payment_method": "click",
+      "status": "pending",
+      "purchased_at": "2023-06-14T11:11:02Z"
+    },
+    {
+      "order_id": "ord_4",
+      "user_id": "usr_2",
+      "items": [
+        {
+          "title": "The Catcher in the Rye",
+          "price": 131375.0
+        },
+        {
+          "title": "Circe",
+          "price": 212125.0
+        }
+      ],
+      "total_amount": 343500.0,
+      "currency": "UZS",
+      "payment_method": "card",
+      "status": "cancelled",
+      "purchased_at": "2024-10-25T20:30:50Z"
+    },
+    {
+      "order_id": "ord_5",
+      "user_id": "usr_3",
+      "items": [
+        {
+          "title": "The Color Purple",
+          "price": 122594
+        },
+        {
+          "title": "The Color Purple",
+          "price": 193250.0
+        },
+        {
+          "title": "To Kill a Mockingbird",
+          "price": 93362
+        }
+      ],
+      "total_amount": 409206.0,
+      "currency": "UZS",
+      "payment_method": "click",
+      "status": "paid",
+      "purchased_at": "2024-12-02T15:51:59Z"
+    },
+    {
+      "order_id": "ord_6",
+      "user_id": "usr_3",
+      "items": [
+        {
+          "title": "The Shadow of the Wind",
+          "price": 117125
+        }
+      ],
+      "total_amount": 117125,
+      "currency": "UZS",
+      "payment_method": "click",
+      "status": "paid",
+      "purchased_at": "2025-01-06T16:32:33Z"
+    },
+    {
+      "order_id": "ord_7",
+      "user_id": "usr_3",
+      "items": [
+        {
+          "title": "1984",
+          "price": 251625.0
+        },
+        {
+          "title": "Crime and Punishment",
+          "price": 124443
+        }
+      ],
+      "total_amount": 376068.0,
+      "currency": "UZS",
+      "payment_method": "payme",
+      "status": "cancelled",
+      "purchased_at": "2023-04-30T01:05:10Z"
+    },
+    {
+      "order_id": "ord_8",
+      "user_id": "usr_4",
+      "items": [
+        {
+          "title": "The Color Purple",
+          "price": 122594
+        },
+        {
+          "title": "The Silent Patient",
+          "price": 75863
+        }
+      ],
+      "total_amount": 198457,
+      "currency": "UZS",
+      "payment_method": "card",
+      "status": "pending",
+      "purchased_at": "2022-11-06T10:32:14Z"
+    },
+    {
+      "order_id": "ord_9",
+      "user_id": "usr_4",
+      "items": [
+        {
+          "title": "The Alchemist",
+          "price": 146216
+        },
+        {
+          "title": "The Kite Runner",
+          "price": 194032
+        },
+        {
+          "title": "Dune",
+          "price": 95351
+        }
+      ],
+      "total_amount": 435599,
+      "currency": "UZS",
+      "payment_method": "click",
+      "status": "paid",
+      "purchased_at": "2024-09-06T05:17:23Z"
+    },
+    {
+      "order_id": "ord_10",
+      "user_id": "usr_5",
+      "items": [
+        {
+          "title": "The Old Man and the Sea",
+          "price": 145193
+        },
+        {
+          "title": "Wuthering Heights",
+          "price": 136175
+        }
+      ],
+      "total_amount": 281368,
+      "currency": "UZS",
+      "payment_method": "card",
+      "status": "pending",
+      "purchased_at": "2024-10-02T07:47:27Z"
+    },
+    {
+      "order_id": "ord_11",
+      "user_id": "usr_5",
+      "items": [
+        {
+          "title": "The Midnight Library",
+          "price": 267625.0
+        }
+      ],
+      "total_amount": 267625.0,
+      "currency": "UZS",
+      "payment_method": "cash",
+      "status": "cancelled",
+      "purchased_at": "2024-12-19T09:54:52Z"
+    },
+    {
+      "order_id": "ord_12",
+      "user_id": "usr_6",
+      "items": [
+        {
+          "title": "Slaughterhouse-Five",
+          "price": 80813
+        }
+      ],
+      "total_amount": 80813,
+      "currency": "UZS",
+      "payment_method": "cash",
+      "status": "cancelled",
+      "purchased_at": "2022-07-02T12:29:23Z"
+    },
+    {
+      "order_id": "ord_13",
+      "user_id": "usr_7",
+      "items": [
+        {
+          "title": "The Alchemist",
+          "price": 146216
+        }
+      ],
+      "total_amount": 146216,
+      "currency": "UZS",
+      "payment_method": "payme",
+      "status": "pending",
+      "purchased_at": "2022-12-29T02:55:54Z"
+    },
+    {
+      "order_id": "ord_14",
+      "user_id": "usr_7",
+      "items": [
+        {
+          "title": "Sapiens",
+          "price": 186474
+        }
+      ],
+      "total_amount": 186474,
+      "currency": "UZS",
+      "payment_method": "cash",
+      "status": "cancelled",
+      "purchased_at": "2024-07-10T22:36:01Z"
+    },
+    {
+      "order_id": "ord_15",
+      "user_id": "usr_8",
+      "items": [
+        {
+          "title": "The Shadow of the Wind",
+          "price": 117125
+        },
+        {
+          "title": "Beloved",
+          "price": 199379
+        },
+        {
+          "title": "Never Let Me Go",
+          "price": 189501
+        }
+      ],
+      "total_amount": 506005,
+      "currency": "UZS",
+      "payment_method": "click",
+      "status": "cancelled",
+      "purchased_at": "2022-03-04T01:28:59Z"
+    },
+    {
+      "order_id": "ord_16",
+      "user_id": "usr_8",
+      "items": [
+        {
+          "title": "The Great Gatsby",
+          "price": 162121
+        },
+        {
+          "title": "Wuthering Heights",
+          "price": 303625.0
+        }
+      ],
+      "total_amount": 465746.0,
+      "currency": "UZS",
+      "payment_method": "click",
+      "status": "cancelled",
+      "purchased_at": "2025-10-26T11:03:32Z"
+    },
+    {
+      "order_id": "ord_17",
+      "user_id": "usr_9",
+      "items": [
+        {
+          "title": "Sapiens",
+          "price": 186474
+        },
+        {
+          "title": "Looking for Alaska",
+          "price": 189759
+        },
+        {
+          "title": "Moby-Dick",
+          "price": 213750.0
+        }
+      ],
+      "total_amount": 589983.0,
+      "currency": "UZS",
+      "payment_method": "payme",
+      "status": "cancelled",
+      "purchased_at": "2023-05-16T23:18:01Z"
+    },
+    {
+      "order_id": "ord_18",
+      "user_id": "usr_9",
+      "items": [
+        {
+          "title": "The Color Purple",
+          "price": 193250.0
+        },
+        {
+          "title": "Animal Farm",
+          "price": 184375.0
+        }
+      ],
+      "total_amount": 377625.0,
+      "currency": "UZS",
+      "payment_method": "payme",
+      "status": "paid",
+      "purchased_at": "2025-11-16T07:29:52Z"
+    },
+    {
+      "order_id": "ord_19",
+      "user_id": "usr_10",
+      "items": [
+        {
+          "title": "The Midnight Library",
+          "price": 135366
+        }
+      ],
+      "total_amount": 135366,
+      "currency": "UZS",
+      "payment_method": "cash",
+      "status": "paid",
+      "purchased_at": "2022-09-18T04:51:09Z"
+    }
+  ],
+  "cart_examples": [
+    {
+      "cart_id": "cart_1",
+      "user_id": "usr_1",
+      "items": [
+        {
+          "listing_id": "list_61",
+          "quantity": 2
+        },
+        {
+          "listing_id": "list_115",
+          "quantity": 1
+        },
+        {
+          "listing_id": "list_95",
+          "quantity": 2
+        }
+      ],
+      "total_price": 1002994.0,
+      "currency": "UZS",
+      "payment_method": "payme",
+      "status": "cancelled",
+      "created_at": "2025-01-11T03:17:45Z"
+    },
+    {
+      "cart_id": "cart_2",
+      "user_id": "usr_2",
+      "items": [
+        {
+          "listing_id": "list_12",
+          "quantity": 1
+        },
+        {
+          "listing_id": "list_84",
+          "quantity": 1
+        },
+        {
+          "listing_id": "list_6",
+          "quantity": 2
+        }
+      ],
+      "total_price": 854289.0,
+      "currency": "UZS",
+      "payment_method": "click",
+      "status": "paid",
+      "created_at": "2024-01-14T19:39:50Z"
+    },
+    {
+      "cart_id": "cart_3",
+      "user_id": "usr_3",
+      "items": [
+        {
+          "listing_id": "list_35",
+          "quantity": 1
+        }
+      ],
+      "total_price": 184375.0,
+      "currency": "UZS",
+      "payment_method": "card",
+      "status": "cancelled",
+      "created_at": "2024-07-17T17:19:14Z"
+    },
+    {
+      "cart_id": "cart_4",
+      "user_id": "usr_4",
+      "items": [
+        {
+          "listing_id": "list_124",
+          "quantity": 1
+        }
+      ],
+      "total_price": 62968,
+      "currency": "UZS",
+      "payment_method": "cash",
+      "status": "paid",
+      "created_at": "2024-10-03T10:59:35Z"
+    },
+    {
+      "cart_id": "cart_5",
+      "user_id": "usr_5",
+      "items": [
+        {
+          "listing_id": "list_58",
+          "quantity": 1
+        },
+        {
+          "listing_id": "list_65",
+          "quantity": 2
+        },
+        {
+          "listing_id": "list_68",
+          "quantity": 2
+        }
+      ],
+      "total_price": 648817.0,
+      "currency": "UZS",
+      "payment_method": "payme",
+      "status": "pending",
+      "created_at": "2023-12-28T08:44:24Z"
+    },
+    {
+      "cart_id": "cart_6",
+      "user_id": "usr_6",
+      "items": [
+        {
+          "listing_id": "list_77",
+          "quantity": 2
+        },
+        {
+          "listing_id": "list_143",
+          "quantity": 2
+        }
+      ],
+      "total_price": 1106502.0,
+      "currency": "UZS",
+      "payment_method": "cash",
+      "status": "cancelled",
+      "created_at": "2024-12-14T12:48:21Z"
+    },
+    {
+      "cart_id": "cart_7",
+      "user_id": "usr_7",
+      "items": [
+        {
+          "listing_id": "list_88",
+          "quantity": 2
+        }
+      ],
+      "total_price": 386500.0,
+      "currency": "UZS",
+      "payment_method": "card",
+      "status": "pending",
+      "created_at": "2025-01-08T04:35:48Z"
+    },
+    {
+      "cart_id": "cart_8",
+      "user_id": "usr_8",
+      "items": [
+        {
+          "listing_id": "list_4",
+          "quantity": 1
+        },
+        {
+          "listing_id": "list_50",
+          "quantity": 2
+        },
+        {
+          "listing_id": "list_14",
+          "quantity": 2
+        }
+      ],
+      "total_price": 529575,
+      "currency": "UZS",
+      "payment_method": "payme",
+      "status": "cancelled",
+      "created_at": "2024-12-15T21:29:57Z"
+    },
+    {
+      "cart_id": "cart_9",
+      "user_id": "usr_9",
+      "items": [
+        {
+          "listing_id": "list_33",
+          "quantity": 2
+        },
+        {
+          "listing_id": "list_94",
+          "quantity": 2
+        },
+        {
+          "listing_id": "list_27",
+          "quantity": 2
+        }
+      ],
+      "total_price": 860574,
+      "currency": "UZS",
+      "payment_method": "card",
+      "status": "paid",
+      "created_at": "2022-01-22T00:36:09Z"
+    },
+    {
+      "cart_id": "cart_10",
+      "user_id": "usr_10",
+      "items": [
+        {
+          "listing_id": "list_126",
+          "quantity": 2
+        }
+      ],
+      "total_price": 361250.0,
+      "currency": "UZS",
+      "payment_method": "click",
+      "status": "cancelled",
+      "created_at": "2025-11-17T23:18:28Z"
+    }
+  ]
+}
