@@ -8,6 +8,7 @@ import ChatWorkspace from '../components/ChatWorkspace';
 import BookPlanner from '../components/BookPlanner';
 import FinishedBookAnalysis from '../components/FinishedBookAnalysis';
 import AuthModal from '../components/AuthModal';
+import ContactForm from '../components/ContactForm';
 import { BookOpen, Users, ShoppingBag, Sparkles, Zap, ChevronRight, MessageSquare, ArrowLeft, User, LogOut, Settings, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { booksData } from '../lib/data';
@@ -341,19 +342,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer id="contact" className="py-4 border-top border-light-subtle mt-auto bg-body">
-        <div className="container">
-          <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-            <div className="d-flex align-items-center gap-2">
-              <BookOpen className="text-primary" size={20} />
-              <span className="fw-bold">KitobAI</span>
+      {/* Footer / Contact Section */}
+      <footer id="contact" className="py-5 border-top border-light-subtle bg-body">
+        <div className="container py-4">
+          <div className="mb-5 text-center">
+            <h2 className="display-6 fw-bold mb-3">Biz bilan Bog'lanish</h2>
+            <p className="text-secondary mb-5 mx-auto fw-medium fs-5" style={{ maxWidth: '600px' }}>
+              Savollaringiz yoki hamkorlik takliflaringiz bormi? Quyidagi shakl orqali bizga xabar yuboring.
+            </p>
+          </div>
+          
+          <div className="mb-5">
+            <ContactForm />
+          </div>
+
+          <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-4 mt-5 pt-5 border-top border-light-subtle">
+            <div className="d-flex align-items-center gap-3">
+              <div className="p-2 bg-primary bg-opacity-10 text-primary rounded-3">
+                <BookOpen size={24} />
+              </div>
+              <span className="h4 fw-bold m-0 text-dark">Kitob<span className="text-primary">AI</span></span>
             </div>
 
-            <div className="d-flex gap-4 small fw-medium">
-              <a href="#" className="text-secondary text-decoration-none transition-all hover-scale-101">About</a>
-              <a href="#" className="text-secondary text-decoration-none transition-all hover-scale-101">Contact</a>
-              <a href="#" className="text-secondary text-decoration-none transition-all hover-scale-101">Privacy</a>
+            <div className="d-flex gap-4 small fw-bold">
+              <a href="#" className="text-secondary text-decoration-none transition-all hover-text-primary">Kompaniya haqida</a>
+              <a href="/marketplace" className="text-secondary text-decoration-none transition-all hover-text-primary">Marketplace</a>
+              <a href="#" className="text-secondary text-decoration-none transition-all hover-text-primary">Maxfiylik siyosati</a>
+            </div>
+
+            <div className="small text-secondary fw-medium">
+              © 2026 KitobAI. Barcha huquqlar himoyalangan.
             </div>
           </div>
         </div>
